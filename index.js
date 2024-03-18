@@ -8,7 +8,9 @@ const app = express();
 const socket = require("socket.io")
 require("dotenv").config();
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://chat-front-khaki.vercel.app'
+}));
 app.use(express.json());
 
 app.use("/api", userroute);
