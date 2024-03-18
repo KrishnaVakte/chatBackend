@@ -29,6 +29,10 @@ const server = app.listen(port, () => {
   console.log(`server is listening on port:${port}`);
 });
 
+app.get('/', (req, res) => {
+  res.send("app running...")
+})
+
 const io = socket(server , {
   cors:{
     origin:"http://localhost:3000",
